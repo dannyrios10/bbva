@@ -175,7 +175,7 @@ h1, h2, h3, h4, h5, h6 {
   }
   .nav-menu a span {
     display: none;
-    color: #fff;
+    color:  #25a7d8;
   }
 }
 
@@ -214,7 +214,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mobile-nav-toggle i {
-  color: white;
+  color:  #25a7d8;
 }
 
 .mobile-nav-active {
@@ -1171,11 +1171,15 @@ section {
 
 .map{
   text-align: center;
-  margin-left: 0px;
+  margin-left: -200px;
 }
 
 @media (min-width: 992px) {
   .map {
     margin-left: 170px;
   }
+}
+
+.bbva-primary{
+  background-color: #002A67;
 }
