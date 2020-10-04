@@ -1,16 +1,16 @@
 <!-- ======= Footer ======= -->
 <footer id="footer">
     <div class="container">
-      <img src="assets/img/logo.png" width="100" alt="">
-      <p>© 2020 BBVA Bancomer, S. A., Institución de Banca Múltiple, Grupo Financiero BBVA Bancomer, Avenida Paseo de la Reforma 510, colonia Juárez, código postal 06600, alcaldía Cuauhtémoc, Ciudad de México</p>
+      <img [src]="logo" width="100" alt="">
+      <p>{{info.direccion}}</p>
       <div class="social-links">
-        <a target="_blank" href="https://bbva.info/2J1E9F1" class="twitter"><i class="bx bxl-twitter"></i></a>
-        <a target="_blank" href="https://bbva.info/2MDG5Z8" class="facebook"><i class="bx bxl-facebook"></i></a>
-        <a target="_blank" href="https://bbva.info/2ZzFAB1" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a target="_blank" href="https://bbva.info/2Yq8O5t" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        <a target="_blank" href= {{info.twitter}} class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a target="_blank" href= {{info.facebook}} class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a target="_blank" href={{info.instagram}} class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a target="_blank" href={{info.linkedin}} class="linkedin"><i class="bx bxl-linkedin"></i></a>
       </div>
       <div class="copyright">
-        <a href="https://www.bbva.mx/content/dam/public-web/mexico/documents/tarifario-general/Tarifario.pdf">Consulta los costos y las comisiones de nuestros productos</a>
+        <a target="_blank"href={{info.terms}}>{{info.info}}</a>
       </div>
     </div>
   </footer><!-- End Footer -->

@@ -1,12 +1,11 @@
 
 
-<div class="card w-800">
+<div class="animate__animated animate__fadeIn w-800">
     <div class="card-body">
         <agm-map [latitude]="lat" [longitude]="lng" [zoom]="10">
-            <agm-marker [iconUrl] ="'https://i.postimg.cc/k5q9YFp4/ico.png'" *ngFor="let marcador of marcadores; let i = index" [latitude]="marcador.lat" [longitude]="marcador.lng">
+            <agm-marker [iconUrl] ="file.icono" *ngFor="let marcador of marcadores; let i = index" [latitude]="marcador.lat" [longitude]="marcador.lng">
                 <agm-info-window >
                     <div class="card text-white mb-3 bbva-primary" style="max-width: 25rem;">
-                        <div class="card-header"><img src="../../../assets/img/logo.png" width="50px" alt=""></div>
                         <div class="card-body">
                           <h5 class="card-title"><b>Dirección: </b>{{marcador.titulo}}</h5>
                           <p class="card-text"><b>Código Postal: </b>{{marcador.codigo}}</p>

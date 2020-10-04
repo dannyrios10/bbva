@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Data } from '../../interfaces/data.interface';
+import { DataService } from '../../services/data.service';
+import { Files } from '../../interfaces/files.interface';
 
 @Component({
   selector: 'app-about',
@@ -8,7 +11,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  constructor() { }
+  info: Data = {};
+  files: Files = {};
+
+  constructor(public infoData: DataService) { 
+
+    this.infoData.getData().subscribe((data: Data) => this.info = data);
+    this.infoData.getFiles().subscribe((data: Files) => this.files = data);
+
+  }
 
   ngOnInit(): void {
   }

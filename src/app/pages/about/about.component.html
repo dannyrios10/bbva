@@ -1,10 +1,10 @@
 
   
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex flex-column justify-content-center">
+  <section id="hero"  class="d-flex flex-column justify-content-center">
     <div class="container" data-aos="zoom-in" data-aos-delay="100">
-      <img src="assets/img/logo.png" width="200" alt="">
-      <p><span class="typed" data-typed-items="Creando Oportunidades">Creando Oportunidades</span></p>
+      <img [src]="files.logo" width="200" alt="">
+      <p><span class="animate__backInUp" data-typed-items="Creando Oportunidades">{{info.slogan}}</span></p>
     </div>
   </section><!-- End Hero -->
 
@@ -29,7 +29,7 @@
               <i class="bx bxs-map"></i>
             </div>
             <h4><a routerLink="/bancos">BBVA Cerca de ti</a></h4>
-            <p>Encuentra ATM´s y Cajeros Automáticos en cualquier parte de la República Mexicana</p>
+            <p>{{info.bancos}}</p>
           </div>
         </div>
 
@@ -42,7 +42,7 @@
               <i class="bx bx-money"></i>
             </div>
             <h4><a routerLink="/cajeros">Deposita o Retira Efectivo </a></h4>
-            <p>En BBVA Puedes depositar o retirar en efectivo en cualquiera de nuestros cajeros automáticos.</p>
+            <p>{{info.cajeros}}</p>
           </div>
         </div>
 
@@ -55,7 +55,7 @@
              <i class="bx bx-time"></i>
             </div>
             <h4><a routerLink="/home">Horarios de Servicio</a></h4>
-            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+            <p>{{info.atms}}</p>
           </div>
         </div>
 
