@@ -15,6 +15,8 @@ import { BancosComponent } from './pages/bancos/bancos.component';
 import { AtmsComponent } from './pages/atms/atms.component';
 import { MapaComponent } from './components/mapa/mapa.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 // Extras
 
@@ -37,7 +39,8 @@ import { HttpClientModule } from '@angular/common/http';
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyCi3E7IjSK_Z5r6Cb9CSc0NasG2rMx-Pj4'
     }),
-    HttpClientModule
+    HttpClientModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]
